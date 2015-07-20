@@ -1,0 +1,21 @@
+{
+  "name": "yaeti",
+  "version": "0.0.1",
+  "description": "Yet Another EventTarget Implementation",
+  "author": "Iñaki Baz Castillo <ibc@aliax.net>",
+  "license": "MIT",
+  "main": "index.js",
+  "browser": {
+    "./lib/Event.js": "./lib/Event.browser.js"
+  },
+  "devDependencies": {
+    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jscs-stylish": "^1.1.0",
+    "gulp-jshint": "^1.11.2",
+    "jshint-stylish": "~1.0.2"
+  },
+  "engines": {
+    "node": ">=0.10.32"
+  }
+}
