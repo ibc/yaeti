@@ -1,6 +1,6 @@
 {
   "name": "yaeti",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yet Another EventTarget Implementation",
   "author": "Iñaki Baz Castillo <ibc@aliax.net>",
   "license": "MIT",
