@@ -69,7 +69,12 @@ function Foo() {
 yaeti.EventTarget.call(obj);
 ```
 
-The interface implements the `addEventListener`, `removeEventListener` and `dispatchEvent` methods.
+The interface implements the `addEventListener`, `removeEventListener` and `dispatchEvent` methods as defined by the W3C.
+
+
+##### `listeners` read-only property
+
+Returns an object whose keys are configured event types (String) and whose values are an array of listeners (functions) for those event types.
 
 
 #### `yaeti.Event` interface
