@@ -1,6 +1,12 @@
 {
-	"preset": "crockford",
-	"validateIndentation": "\t",
-	"disallowKeywords": ["with"],
-	"disallowDanglingUnderscores": null
+	"preset"                                     : "crockford",
+	"validateIndentation"                        : "\t",
+	"disallowKeywords"                           : [ "with" ],
+	"disallowDanglingUnderscores"                : null,
+	"disallowNewlineBeforeBlockStatements"       : null,
+	"disallowSpacesInsideArrayBrackets"          : null,
+	"requireCurlyBraces"                         : null,
+	"requireMultipleVarDecl"                     : null,
+	"requireSpaceAfterKeywords"                  : null,
+	"requireSpacesInAnonymousFunctionExpression" : null
 }

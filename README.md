@@ -17,7 +17,6 @@ $ npm install yaeti --save
 ```javascript
 var yaeti = require('yaeti');
 
-
 // Custom class we want to make an EventTarget.
 function Foo() {
     // Make Foo an EventTarget.
@@ -43,11 +42,9 @@ var event = new yaeti.Event('bar');
 
 foo.dispatchEvent(event);
 
-
 // Output:
 // => "listener2"
 ```
-
 
 
 ## API
@@ -90,7 +87,7 @@ var event = new yaeti.Event('bar');
 
 ## Author
 
-[Iñaki Baz Castillo](https://github.com/ibc)
+[Iñaki Baz Castillo](https://inakibaz.me)
 
 
 ## License
