@@ -19,9 +19,12 @@ var yaeti = require('yaeti');
 
 // Custom class we want to make an EventTarget.
 function Foo() {
-    // Make Foo an EventTarget.
+    // Call EventTarget constructor
     yaeti.EventTarget.call(this);
 }
+// Inherit EventTarget prototype
+Foo.prototype = Object.create(yaeti.EventTarget.prototype);
+Foo.prototype.constructor = Foo;
 
 // Create an instance.
 var foo = new Foo();
@@ -50,20 +53,26 @@ foo.dispatchEvent(event);
 ## API
 
 
-#### `yaeti.EventTarget` interface
+### `yaeti.EventTarget` interface
 
 Implementation of the [EventTarget](https://developer.mozilla.org/es/docs/Web/API/EventTarget) interface.
 
-* Make a custom class inherit from `EventTarget`:
+#### ES5
 ```javascript
 function Foo() {
     yaeti.EventTarget.call(this);
 }
+Foo.prototype = Object.create(yaeti.EventTarget.prototype);
+Foo.prototype.constructor = Foo;
 ```
 
-* Make an existing object an `EventTarget`:
+#### ES6
 ```javascript
-yaeti.EventTarget.call(obj);
+class Foo extends EventTarget () {
+    constructor () {
+        super();
+    }
+}
 ```
 
 The interface implements the `addEventListener`, `removeEventListener` and `dispatchEvent` methods as defined by the W3C.
@@ -74,7 +83,7 @@ The interface implements the `addEventListener`, `removeEventListener` and `disp
 Returns an object whose keys are configured event types (String) and whose values are an array of listeners (functions) for those event types.
 
 
-#### `yaeti.Event` interface
+### `yaeti.Event` interface
 
 Implementation of the [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) interface.
 
