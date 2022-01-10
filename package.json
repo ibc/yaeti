@@ -13,7 +13,7 @@
     "url": "https://github.com/ibc/yaeti.git"
   },
   "devDependencies": {
-    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.0",
     "gulp-jscs": "^4.0.0",
     "gulp-jscs-stylish": "^1.4.0",
     "gulp-jshint": "^2.0.4",
